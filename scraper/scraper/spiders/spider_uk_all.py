@@ -1,12 +1,13 @@
-import scrapy
 import datetime
+
+import scrapy
 from scraper.items import SongUK
 
 
 class SpiderUkAll(scrapy.Spider):
     name = 'spider_uk_all'
     start_urls = ['https://www.officialcharts.com/charts/uk-top-40-singles-chart/{}/7501/'.format(x) for x in [
-        (datetime.date(2018, 12, 31)+datetime.timedelta(weeks=i)).strftime('%Y%m%d') for i in range(0, 52)
+        (datetime.date(2018, 12, 31) + datetime.timedelta(weeks=i)).strftime('%Y%m%d') for i in range(0, 52)
     ]]
 
     def parse(self, response):
@@ -17,7 +18,7 @@ class SpiderUkAll(scrapy.Spider):
         chart_position = 1
         ulr = response.request.url
         weekstr = ulr.split('/')[-3]
-        week = datetime.datetime.strptime(weekstr,"%Y%m%d").isocalendar()[1]
+        week = datetime.datetime.strptime(weekstr, "%Y%m%d").isocalendar()[1]
         for song, week_on_chart in zip(songs, no_of_weeks):
             chart_position = chart_position
             title = song.css('div.title > a::text').extract()

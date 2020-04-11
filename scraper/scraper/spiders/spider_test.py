@@ -1,7 +1,7 @@
 import scrapy
-from scraper.items import Song
 
-#document.querySelector("body > div:nth-child(3) > table > tbody > tr > td > center > table > tbody > tr > td > table:nth-child(1) > tbody > tr > td > table > tbody > tr > td:nth-child(1) > table > tbody > tr:nth-child(5) > td:nth-child(4) > table > tbody > tr > td:nth-child(3) > div > b > a")
+
+# document.querySelector("body > div:nth-child(3) > table > tbody > tr > td > center > table > tbody > tr > td > table:nth-child(1) > tbody > tr > td > table > tbody > tr > td:nth-child(1) > table > tbody > tr:nth-child(5) > td:nth-child(4) > table > tbody > tr > td:nth-child(3) > div > b > a")
 
 
 class SpiderTest(scrapy.Spider):

@@ -24,5 +24,5 @@ class SpiderFin(scrapy.Spider):
             result['chart_position'] = chart_position
             result['production_house'] = production_house
             chart_position += 1
-            
+
             yield result

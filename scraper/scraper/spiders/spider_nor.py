@@ -23,5 +23,5 @@ class SpiderNor(scrapy.Spider):
             result['chart_position'] = chart_position
             result['production_house'] = None
             chart_position += 1
-            
+
             yield result

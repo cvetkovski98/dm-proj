@@ -18,6 +18,7 @@ class Song(scrapy.Item):
     chart_position = scrapy.Field()
     count = scrapy.Field()
 
+
 class SongUK(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()

@@ -1,6 +1,7 @@
 import scrapy
 from scraper.items import Song
 
+
 class SpiderNed(scrapy.Spider):
     name = 'spider_ned'
     start_urls = [

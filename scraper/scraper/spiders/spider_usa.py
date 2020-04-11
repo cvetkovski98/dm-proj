@@ -16,7 +16,8 @@ class SpiderUSA(scrapy.Spider):
         for song in songs:
             chart_position = chart_position
             title = song.css('span.chart-element__information__song.text--truncate.color--primary::text').extract()
-            artists = song.css('span.chart-element__information__artist.text--truncate.color--secondary::text').extract()
+            artists = song.css(
+                'span.chart-element__information__artist.text--truncate.color--secondary::text').extract()
 
             result['title'] = title
             result['artist'] = artists

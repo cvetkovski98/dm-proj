@@ -29,3 +29,10 @@ class SongUK(scrapy.Item):
     chart_position = scrapy.Field()
     week = scrapy.Field()
     weeks_on_chart = scrapy.Field()
+
+
+class ShazamSong(scrapy.Item):
+    country = scrapy.Field()
+    title = scrapy.Field()
+    artist = scrapy.Field()
+    chart_position = scrapy.Field()

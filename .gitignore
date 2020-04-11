@@ -169,5 +169,3 @@ ENV/
 env.bak/
 venv.bak/
 pip-selfcheck.json
-
-scraper/data/

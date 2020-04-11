@@ -17,3 +17,14 @@ class Song(scrapy.Item):
     production_house = scrapy.Field()
     chart_position = scrapy.Field()
     count = scrapy.Field()
+
+class SongUK(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    country = scrapy.Field()
+    title = scrapy.Field()
+    artist = scrapy.Field()
+    production_house = scrapy.Field()
+    chart_position = scrapy.Field()
+    week = scrapy.Field()
+    weeks_on_chart = scrapy.Field()
